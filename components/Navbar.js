@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // import the icons you need
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Link from "next/link";
 
 const Bar = styled.nav`
@@ -69,10 +69,22 @@ const Hamburger = styled.div`
     position: static;
   }
 `;
+
+const wiggle = keyframes`
+    0% { transform: rotate(0deg); }
+   50% { transform: rotate(20deg); }
+   75% { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
+`;
+
 const BlobStyle = styled.svg`
   position: relative;
   top: 0px;
   left: 0px;
+  &:hover {
+    animation-name: ${wiggle};
+    animation-duration: 1s;
+  }
 `;
 
 export default function Navbar() {

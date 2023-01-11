@@ -84,15 +84,6 @@ const BlobStyle = styled.svg`
 export default function Blob() {
   return (
     <>
-      {/* <Logo>
-        <BlobStyle viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill="#1f4797"
-            d="M64,-16C72.5,5.5,61.8,37.9,40.5,52.6C19.2,67.4,-12.7,64.4,-36.8,47.6C-60.9,30.8,-77.3,0.2,-69.9,-19.7C-62.4,-39.7,-31.2,-48.9,-1.7,-48.3C27.7,-47.8,55.4,-37.4,64,-16Z"
-            transform="translate(100 170)"
-          />
-        </BlobStyle>
-      </Logo> */}
       <Logo1>
         <BlobStyle viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
           <path

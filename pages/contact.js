@@ -1,3 +1,5 @@
+import ContactMe from "../components/ContactMe";
+
 export default function Contact() {
-  return <div>Contact me!</div>;
+  return <ContactMe />;
 }
