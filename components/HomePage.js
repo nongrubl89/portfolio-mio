@@ -16,7 +16,7 @@ export default function HomePage() {
     <div>
       <Blob />
       <Intro>
-        Hi! I'm a San Diego based web developer with a focus on front-end
+        Hi! I&apos;m a San Diego based web developer with a focus on front-end
         technologies. I love bringing good design to life with logic, creativity
         and code.
       </Intro>
