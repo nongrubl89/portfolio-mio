@@ -1,6 +1,5 @@
-import HomePage from "../components/HomePage";
-import { GlobalStyle } from "../components/styles/Body";
-import Head from "next/head";
+import Head from 'next/head';
+import HomePage from '../components/HomePage';
 
 export default function Home() {
   return (

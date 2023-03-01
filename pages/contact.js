@@ -1,4 +1,4 @@
-import ContactMe from "../components/ContactMe";
+import ContactMe from '../components/ContactMe';
 
 export default function Contact() {
   return <ContactMe />;
