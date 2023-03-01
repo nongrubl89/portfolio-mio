@@ -1,9 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // import PropTypes from "prop-types";
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { useState, useEffect } from 'react';
 // import Navbar from './Navbar';
-import HomePage from './HomePage';
-import PortfolioTicker from './PortfolioTicker';
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -21,11 +20,16 @@ const GlobalStyles = createGlobalStyle`
     line-height:1.5;
     color: black;
     background-color: ${(props) => props.color};;
-    position:relative;
-    min-height:100%;
+    height:100%;
     transition: background-color 2s ease;
-    overflow-x:hidden;
+    position: absolute;
+    width:100vw;
   }
+
+  #__next {
+    height: 100%; position: relative;
+}
+
   a {
     text-decoration: none;
     color: #1F4797;

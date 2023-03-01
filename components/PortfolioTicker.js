@@ -1,7 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import { useAnimation, motion, color } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect, useState } from 'react';
 
 const ticker = keyframes` 
   0% {
@@ -12,7 +9,7 @@ const ticker = keyframes`
   }
   `;
 
-const TickerContainer = styled(motion.div)`
+const TickerContainer = styled.div`
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -41,29 +38,8 @@ const TickerItem = styled.h1`
 `;
 
 export default function PortfolioTicker() {
-  const colorAnimation = useAnimation();
-  const { ref: ref1, inView: inView1 } = useInView({
-    threshold: 0.5,
-  });
-  const colorSetter = {
-    brown: {
-      backgroundColor: `brown`,
-    },
-    black: {
-      backgroundColor: `black`,
-    },
-  };
-
-  //   useEffect(() => {
-  //     if (inView1) {
-  //       colorAnimation.start('black');
-  //     }
-  //     if (!inView1) {
-  //       colorAnimation.start('brown');
-  //     }
-  //   }, []);
   return (
-    <TickerContainer ref={ref1} animate={colorAnimation} variants={colorSetter}>
+    <TickerContainer>
       <Ticker>
         <TickerItem animationDelay="15s">
           Portfolio Portfolio Portfolio Portfolio Portfolio
