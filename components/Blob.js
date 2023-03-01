@@ -1,11 +1,11 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const rollAnimation = keyframes`
   0%   { transform: scale(1)}
   25%  { transform: scale(0.8, 1) translate(40vw, 30vh) rotate(160deg);}
   45%  { transform: scale(0.8, 1) translate(60vw, 50vh) rotate(180deg);}
-  65%  { transform: scale(0.8, 1) translate(90vw, 70vh) rotate(160deg);}
-  85%  { transform: scale(1.3) translate(20vw, 100vh) rotate(-20deg); }
+  65%  { transform: scale(0.8, 1) translate(90vw, 20vh) rotate(160deg);}
+  85%  { transform: scale(1.3) translate(20vw, 10vh) rotate(-20deg); }
    `;
 
 const rollAnimation2 = keyframes`

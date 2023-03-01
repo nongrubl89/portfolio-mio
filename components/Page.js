@@ -1,11 +1,15 @@
 // import PropTypes from "prop-types";
-import styled, { createGlobalStyle } from "styled-components";
-import Navbar from "./Navbar";
+import styled, { createGlobalStyle } from 'styled-components';
+import { useState, useEffect } from 'react';
+// import Navbar from './Navbar';
+import HomePage from './HomePage';
+import PortfolioTicker from './PortfolioTicker';
 
 const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
-    font-size:62.5%;
+    height: 100%;
+    margin: 0;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -14,11 +18,13 @@ const GlobalStyles = createGlobalStyle`
     padding: 1em;
     margin:0px;
     font-size: 1.5rem;
-    font-family:'Alegreya', sans-serif;
-    line-height:2;
-    background-color: #fae6cf;
-    color: #1F4797 ;
+    line-height:1.5;
+    color: black;
+    background-color: ${(props) => props.color};;
     position:relative;
+    min-height:100%;
+    transition: background-color 2s ease;
+    overflow-x:hidden;
   }
   a {
     text-decoration: none;
@@ -27,17 +33,35 @@ const GlobalStyles = createGlobalStyle`
 
 `;
 
-const InnerStyles = styled.div`
-  margin: auto;
-`;
-
+// eslint-disable-next-line react/prop-types
 export default function Page({ children }) {
-  console.log(children);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [color, setColor] = useState('#eeea77');
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+    if (scrollPosition >= 100) {
+      setColor('#1a62a3');
+    }
+    if (scrollPosition <= 100) {
+      setColor('#eeea77');
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollPosition]);
+
   return (
-    <div>
-      <GlobalStyles />
-      <Navbar />
-      <InnerStyles>{children}</InnerStyles>
-    </div>
+    <>
+      <GlobalStyles color={color} />
+      {/* <HomePage />
+      <PortfolioTicker /> */}
+      {children}
+    </>
   );
 }

@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // import the icons you need
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import styled, { keyframes } from "styled-components";
-import Link from "next/link";
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import styled, { keyframes } from 'styled-components';
+import Link from 'next/link';
 
 const Bar = styled.nav`
   font-size: 18px;
@@ -88,10 +88,10 @@ const BlobStyle = styled.svg`
 `;
 
 export default function Navbar() {
-  const [displayNav, setDisplayNav] = useState("none");
+  const [displayNav, setDisplayNav] = useState('none');
 
   const toggleNavBar = () => {
-    displayNav === "none" ? setDisplayNav("flex") : setDisplayNav("none");
+    displayNav === 'none' ? setDisplayNav('flex') : setDisplayNav('none');
   };
   return (
     <>
@@ -109,19 +109,19 @@ export default function Navbar() {
       <Bar>
         <NavBarToggle onClick={() => toggleNavBar()}>
           <Hamburger>
-            {" "}
+            {' '}
             <FontAwesomeIcon
               icon={faBars}
               style={{
                 fontSize: 25,
-                color: "#1F4797",
+                color: '#1F4797',
               }}
             />
           </Hamburger>
         </NavBarToggle>
         <MainNav display={displayNav}>
           <NavLi>
-            <NavLink href="#">Projects</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
           </NavLi>
           <NavLi>
             <NavLink href="/contact">Contact</NavLink>

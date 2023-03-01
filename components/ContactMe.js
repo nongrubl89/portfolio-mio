@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const rotate = keyframes`    
   from {
@@ -20,7 +20,7 @@ const Circle = styled.div`
   @media (max-width: 600px) {
     height: 70em;
     width: 70em;
-  } ;
+  }
 `;
 
 export default function ContactMe() {
@@ -47,7 +47,7 @@ export default function ContactMe() {
         <circle cx="100" cy="50" r="75" fill="none" />
         <g>
           <use xlinkHref="#circlePath" fill="none" />
-          <text fill="#1f4797" style={{ fontWeight: "400" }}>
+          <text fill="#1f4797" style={{ fontWeight: '400' }}>
             <textPath xlinkHref="#circlePath">
               ---Get in touch!--Get in touch!--Get in touch!--Get in touch!--
             </textPath>
