@@ -50,6 +50,9 @@ const PortfolioTitle = styled.h6`
   font-weight: 200;
   margin-top: 0;
   opacity: 50%;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    font-size: 1.5em;
+  }
 `;
 
 const PortfolioBlurb = styled.h4`
@@ -57,6 +60,9 @@ const PortfolioBlurb = styled.h4`
   font-weight: ${(props) => props.weightfont};
   font-size: ${(props) => props.sizefont};
   margin-top: 0;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    font-size: 1.5em;
+  }
 `;
 
 // const Line = styled.hr`

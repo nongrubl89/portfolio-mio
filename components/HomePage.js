@@ -95,7 +95,6 @@ export default function AnimatedTitle() {
             I&apos;m a San Diego based web developer with a focus on front-end
             technologies.
           </TitleText>
-          {/* <hr /> */}
           <TitleText
             paddingright
             ff="'Roboto', sans-serif"
