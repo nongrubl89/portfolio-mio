@@ -15,6 +15,7 @@ const Title1 = styled(motion.div)`
   h2 {
     font-family: 'Archivo', sans-serif;
     margin-bottom: 0;
+    font-weight: 200;
   }
   h3 {
     font-family: 'Roboto', sans-serif;
@@ -27,9 +28,7 @@ const Title1 = styled(motion.div)`
     height: 85%;
   }
 `;
-const Line = styled.hr`
-  border: black 1px solid;
-`;
+
 const Container = styled.div`
   justify-content: center;
   min-height: 100vh;
