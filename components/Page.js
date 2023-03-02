@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    padding: 1em;
+    padding: 0;
     margin:0px;
     font-size: 1.5rem;
     line-height:1.5;

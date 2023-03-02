@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
-import { useAnimation } from 'framer-motion';
+import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import PortfolioTicker from './PortfolioTicker';
 
-const Title1 = styled.div`
+const Title1 = styled(motion.div)`
   align-items: center;
   padding: 1em;
   display: grid;
   align-content: center;
   height: 90%;
   font-size: 1.5rem;
-  width: 75%;
+  /* width: 75%; */
   h2 {
     font-family: 'Archivo', sans-serif;
     margin-bottom: 0;
@@ -27,10 +27,13 @@ const Title1 = styled.div`
     height: 85%;
   }
 `;
-
+const Line = styled.hr`
+  border: black 1px solid;
+`;
 const Container = styled.div`
   justify-content: center;
-  height: 100%;
+  min-height: 100vh;
+  display: grid;
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     text-align: right;
   }
