@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
     transition: background-color 2s ease;
     position: absolute;
     width:100vw;
+    overflow-x: hidden;
   }
 
   #__next {
@@ -32,7 +33,8 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: #1F4797;
+    color: black;
+    font-family: "Archivo" sans-serif;
   }
 
 `;
@@ -43,12 +45,16 @@ export default function Page({ children }) {
   const [color, setColor] = useState('#eeea77');
   const handleScroll = () => {
     const position = window.scrollY;
+    console.log(position);
     setScrollPosition(position);
-    if (scrollPosition >= 100) {
+    if (scrollPosition >= 100 && scrollPosition <= 600) {
       setColor('#1a62a3');
     }
     if (scrollPosition <= 100) {
       setColor('#eeea77');
+    }
+    if (scrollPosition >= 600) {
+      setColor('#9678B6');
     }
   };
 

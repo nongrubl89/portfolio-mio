@@ -16,7 +16,7 @@ const TickerContainer = styled.div`
   padding-left: 100%;
   box-sizing: content-box;
   position: relative;
-  height: 100%;
+  height: 60vh;
 `;
 const Ticker = styled.div`
   display: inline-block;
