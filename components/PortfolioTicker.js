@@ -34,6 +34,7 @@ const TickerItem = styled.h1`
   padding: 0 1rem;
   font-size: 10vw;
   font-family: 'Archivo', sans-serif;
+  font-weight: 300;
   animation-delay: ${(props) => props.animationDelay};
 `;
 

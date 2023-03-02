@@ -7,8 +7,6 @@ import PortfolioTicker from './PortfolioTicker';
 const Title1 = styled(motion.div)`
   padding: 1em;
   height: max-content;
-  /* font-size: 1.5rem; */
-  /* width: 75%; */
   display: grid;
   gap: 1em;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -16,7 +14,6 @@ const Title1 = styled(motion.div)`
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     border: none;
     font-size: 3rem;
-    /* margin-left: 2em; */
     height: 85%;
     gap: 0px;
   }
