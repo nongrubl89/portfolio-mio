@@ -15,7 +15,7 @@ const TickerContainer = styled.div`
   white-space: nowrap;
   padding-left: 100%;
   box-sizing: content-box;
-  position: absolute;
+  position: relative;
   height: 100%;
 `;
 const Ticker = styled.div`
