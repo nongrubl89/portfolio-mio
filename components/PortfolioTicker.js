@@ -16,7 +16,7 @@ const TickerContainer = styled.div`
   padding-left: 100%;
   box-sizing: content-box;
   position: relative;
-  height: 60vh;
+  height: 50vh;
 `;
 const Ticker = styled.div`
   display: inline-block;
@@ -32,7 +32,7 @@ const Ticker = styled.div`
 const TickerItem = styled.h1`
   display: inline-block;
   padding: 0 1rem;
-  font-size: 10vw;
+  font-size: 3em;
   font-family: 'Archivo', sans-serif;
   font-weight: 300;
   animation-delay: ${(props) => props.animationDelay};

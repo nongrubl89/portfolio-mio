@@ -47,13 +47,13 @@ export default function Page({ children }) {
     const position = window.scrollY;
     console.log(position);
     setScrollPosition(position);
-    if (scrollPosition >= 100 && scrollPosition <= 600) {
+    if (scrollPosition >= 100 && scrollPosition <= 800) {
       setColor('#1a62a3');
     }
     if (scrollPosition <= 100) {
       setColor('#eeea77');
     }
-    if (scrollPosition >= 600) {
+    if (scrollPosition >= 800) {
       setColor('#9678B6');
     }
   };

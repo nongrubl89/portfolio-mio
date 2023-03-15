@@ -6,40 +6,43 @@ import Link from 'next/link';
 const projects = [
   {
     name: 'Trip Report',
-    Tecnologies:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    Tecnologies: 'Next.js, React Styled Components, Apollo GraphQL, Strapi CMS',
     Description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    SourceCode: 'github.com',
-    LiveProject: 'github.com',
+      'I built Trip Report to solve an issue I come across constantly in my work as a corporate flight attendant: sharing passenger feedback and preferences with my teammates. Users can update the owner of an aircrafts preferences and standard stock requests. They can also create new trips on a specific aircraft, add catering requests to the trip, and then review and provide feedback once the trip is complete. Trip Report is a work in progress. I am currently adding individual passenger profiles, crew profiles, and important aircraft document upload.',
+    SourceCode: 'https://github.com/nongrubl89/Trip-Report',
+    LiveProject: 'https://trip-report-d9g2.vercel.app/',
   },
   {
-    name: 'Trip Report',
+    name: 'Tennis Memory Game',
     Tecnologies:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'React.js , Node.js, Express.js, Multer Image Processing/Upload, MongoDB, Styled Components',
     Description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    SourceCode: 'github.com',
-    LiveProject: 'github.com',
+      'A quick game of tennis themed memory built with React on the front-end and Express.js and MongoDB on the back-end. I used Styled Components and CSS Grid for the layout and love the result. ',
+    SourceCode: 'https://github.com/nongrubl89/Tennis-Memory-Game',
+    LiveProject: 'https://ecstatic-lichterman-006afa.netlify.app/',
   },
   {
-    name: 'Trip Report',
-    Tecnologies:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    name: 'Book Tracker',
+    Tecnologies: 'Vanilla Javascript, HTML, CSS',
     Description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'This is an older project built with the New York Times books API. Users can track and rate books that theyve read and discover other books by their favorite authors thanks to the New York Times books API!',
     SourceCode: 'github.com',
     LiveProject: 'github.com',
   },
 ];
 
+const Frame = styled.div`
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+`;
+
 const PortfolioContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-column: 2/3;
   height: 100vh;
   text-align: left;
   padding: 2em;
-  margin: 10em;
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     margin: 3em;
   }
@@ -65,24 +68,9 @@ const PortfolioBlurb = styled.h4`
   }
 `;
 
-// const Line = styled.hr`
-//   grid-column: 1/3;
-//   color: black;
-// `;
-
-// const MyButton = styled.button`
-//   background-color: black;
-//   color: white;
-//   font-family: 'Roboto', sans-serif;
-//   font-weight: 400;
-//   border: none;
-//   border-radius: 2px;
-//   padding: 1em;
-// `;
-
 const ButtonDiv = styled.div`
   gap: 1em;
-  width: 300px;
+  width: max-content;
   display: grid;
   justify-items: stretch;
   align-items: start;
@@ -95,53 +83,58 @@ const LinkDiv = styled.div`
   align-items: center;
   font-size: medium;
   gap: 0.25em;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    font-size: 1.5em;
+  }
 `;
 
 export default function Portfolio() {
   return (
-    <PortfolioContainer>
-      {projects.map((project) => (
-        <>
-          <hr
-            style={{
-              border: '0',
-              width: '100%',
-              backgroundColor: 'black',
-              height: '1px',
-              gridColumn: '1/3',
-            }}
-          />
-          <PortfolioTitle>Title</PortfolioTitle>
-          <PortfolioBlurb weightfont="400" sizefont="large">
-            {project.name}
-            <FontAwesomeIcon icon="faRegular faCircle" />
-          </PortfolioBlurb>
-          <PortfolioTitle>Technologies Used</PortfolioTitle>
-          <PortfolioBlurb weightfont="300" sizefont="medium">
-            {project.Tecnologies}
-          </PortfolioBlurb>
-          <PortfolioTitle>Description</PortfolioTitle>
-          <PortfolioBlurb weightfont="200" sizefont="small">
-            {project.Description}
-          </PortfolioBlurb>
-          <PortfolioTitle>See It Live</PortfolioTitle>
-          <ButtonDiv>
-            <LinkDiv>
-              {' '}
-              <FontAwesomeIcon icon={faArrowRight} />
-              <Link href="#">Live Project</Link>
-            </LinkDiv>
-            <LinkDiv>
-              {' '}
-              <FontAwesomeIcon icon={faArrowRight} />
-              <Link href="#">Source Code</Link>
-            </LinkDiv>
-            {/* <MyButton type="button">Source Code</MyButton>
+    <Frame>
+      <PortfolioContainer>
+        {projects.map((project) => (
+          <>
+            <hr
+              style={{
+                border: '0',
+                width: '100%',
+                backgroundColor: 'black',
+                height: '1px',
+                gridColumn: '1/3',
+              }}
+            />
+            <PortfolioTitle>Title</PortfolioTitle>
+            <PortfolioBlurb weightfont="400" sizefont="large">
+              {project.name}
+              <FontAwesomeIcon icon="faRegular faCircle" />
+            </PortfolioBlurb>
+            <PortfolioTitle>Technologies Used</PortfolioTitle>
+            <PortfolioBlurb weightfont="300" sizefont="medium">
+              {project.Tecnologies}
+            </PortfolioBlurb>
+            <PortfolioTitle>Description</PortfolioTitle>
+            <PortfolioBlurb weightfont="200" sizefont="small">
+              {project.Description}
+            </PortfolioBlurb>
+            <PortfolioTitle>See It Live</PortfolioTitle>
+            <ButtonDiv>
+              <LinkDiv>
+                {' '}
+                <FontAwesomeIcon icon={faArrowRight} />
+                <Link href="#">Live Project</Link>
+              </LinkDiv>
+              <LinkDiv>
+                {' '}
+                <FontAwesomeIcon icon={faArrowRight} />
+                <Link href="#">Source Code</Link>
+              </LinkDiv>
+              {/* <MyButton type="button">Source Code</MyButton>
             <MyButton type="button">Live Project</MyButton> */}
-          </ButtonDiv>
-          {/* <Line /> */}
-        </>
-      ))}
-    </PortfolioContainer>
+            </ButtonDiv>
+            {/* <Line /> */}
+          </>
+        ))}
+      </PortfolioContainer>
+    </Frame>
   );
 }
