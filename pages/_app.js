@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { config } from '@fortawesome/fontawesome-svg-core';
+import Head from 'next/head';
 import Page from '../components/Page';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import Head from 'next/head';
 
 config.autoAddCss = false;
 
