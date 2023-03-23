@@ -53,8 +53,11 @@ export default function Page({ children }) {
     if (scrollPosition <= 100) {
       setColor('#eeea77');
     }
-    if (scrollPosition >= 800) {
+    if (scrollPosition >= 800 && scrollPosition <= 2200) {
       setColor('#9678B6');
+    }
+    if (scrollPosition >= 2200) {
+      setColor('#eeea77');
     }
   };
 

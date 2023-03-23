@@ -1,59 +1,77 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import Link from 'next/link';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 
-const rotate = keyframes`    
-  from {
-      transform: rotate(360deg);
-    }
-    to {
-      transform: rotate(0);
-    }`;
-const Circle = styled.div`
-  display: flex;
-  svg {
-    color: #4f6eb0;
-    height: 50rem;
-    width: 50rem;
-    animation-name: ${rotate};
-    animation-duration: 25s;
-    animation-timing-function: linear;
+const ContactDiv = styled(motion.div)`
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-auto-rows: 40px;
+
+  h4 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 200;
   }
-  @media (max-width: 600px) {
-    height: 70em;
-    width: 70em;
+  h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
   }
 `;
 
 export default function ContactMe() {
+  const ctrls = useAnimation();
+
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      ctrls.start('visible');
+    }
+    if (!inView) {
+      ctrls.start('hidden');
+    }
+  }, [ctrls, inView]);
+
+  const characterAnimation = {
+    hidden: {
+      opacity: 0,
+      y: `12em`,
+    },
+    visible: {
+      opacity: 1,
+      y: `0em`,
+      transition: {
+        duration: 2,
+        ease: [0.2, 0.65, 0.3, 0.9],
+      },
+    },
+  };
   return (
-    <Circle>
-      <svg
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        width="330px"
-        height="330px"
-        viewBox="0 0 300 300"
-        enableBackground="new 0 0 300 300"
-        xmlSpace="preserve"
-      >
-        <defs>
-          <path
-            id="circlePath"
-            d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-          />
-        </defs>
-        <circle cx="100" cy="50" r="75" fill="none" />
-        <g>
-          <use xlinkHref="#circlePath" fill="none" />
-          <text fill="#1f4797" style={{ fontWeight: '400' }}>
-            <textPath xlinkHref="#circlePath">
-              ---Get in touch!--Get in touch!--Get in touch!--Get in touch!--
-            </textPath>
-          </text>
-        </g>
-      </svg>
-    </Circle>
+    <ContactDiv
+      ref={ref}
+      initial="hidden"
+      animate={ctrls}
+      variants={characterAnimation}
+    >
+      <h4>Get In Touch</h4>
+      <h6>
+        <Link href="https://www.linkedin.com/in/lisaburgnon/">LinkedIn</Link>
+      </h6>
+      <h6>
+        <Link href="https://github.com/nongrubl89">GitHub</Link>
+      </h6>
+      <h6>
+        <Link href="https://mail.google.com/mail/u/example@example.org/?view=cm&to=lisaburgnon@gmail.com">
+          Email
+        </Link>
+      </h6>
+    </ContactDiv>
   );
 }

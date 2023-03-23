@@ -34,6 +34,9 @@ const projects = [
 const Frame = styled.div`
   display: grid;
   grid-template-columns: 5% 90% 5%;
+  justify-items: center;
+  /* height: 100vh; */
+  height: max-content;
 `;
 
 const PortfolioContainer = styled.div`
@@ -41,11 +44,13 @@ const PortfolioContainer = styled.div`
   grid-template-columns: 1fr 2fr;
   grid-column: 2/3;
   grid-column-gap: 1.5em;
-  height: 100vh;
+  /* height: 100vh; */
   text-align: left;
   padding: 2em;
+  width: 65%;
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-    /* margin: 3em; */
+    width: 100%;
+    padding: 1em;
   }
 `;
 
@@ -82,7 +87,7 @@ const LinkDiv = styled.div`
   display: inline-flex;
   font-family: 'Roboto', sans-serif;
   align-items: center;
-  font-size: medium;
+  font-size: small;
   gap: 0.25em;
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     font-size: 1.5em;
@@ -109,11 +114,11 @@ export default function Portfolio() {
               {project.name}
             </PortfolioBlurb>
             <PortfolioTitle>Technologies Used</PortfolioTitle>
-            <PortfolioBlurb weightfont="300" sizefont="medium">
+            <PortfolioBlurb weightfont="300" sizefont="small">
               {project.Tecnologies}
             </PortfolioBlurb>
             <PortfolioTitle>Description</PortfolioTitle>
-            <PortfolioBlurb weightfont="200" sizefont="small">
+            <PortfolioBlurb weightfont="300" sizefont="medium">
               {project.Description}
             </PortfolioBlurb>
             <PortfolioTitle>See It Live</PortfolioTitle>

@@ -4,6 +4,7 @@ import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import PortfolioTicker from './PortfolioTicker';
 import Portfolio from './Portfolio';
+import ContactMe from './ContactMe';
 
 const Title1 = styled(motion.div)`
   padding: 1em;
@@ -109,6 +110,7 @@ export default function AnimatedTitle() {
       </Container>
       <PortfolioTicker />
       <Portfolio />
+      <ContactMe />
     </>
   );
 }
