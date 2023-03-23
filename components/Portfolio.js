@@ -33,18 +33,19 @@ const projects = [
 
 const Frame = styled.div`
   display: grid;
-  grid-template-columns: 15% 70% 15%;
+  grid-template-columns: 5% 90% 5%;
 `;
 
 const PortfolioContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-column: 2/3;
+  grid-column-gap: 1.5em;
   height: 100vh;
   text-align: left;
   padding: 2em;
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-    margin: 3em;
+    /* margin: 3em; */
   }
 `;
 
@@ -106,7 +107,6 @@ export default function Portfolio() {
             <PortfolioTitle>Title</PortfolioTitle>
             <PortfolioBlurb weightfont="400" sizefont="large">
               {project.name}
-              <FontAwesomeIcon icon="faRegular faCircle" />
             </PortfolioBlurb>
             <PortfolioTitle>Technologies Used</PortfolioTitle>
             <PortfolioBlurb weightfont="300" sizefont="medium">
@@ -121,12 +121,12 @@ export default function Portfolio() {
               <LinkDiv>
                 {' '}
                 <FontAwesomeIcon icon={faArrowRight} />
-                <Link href="#">Live Project</Link>
+                <Link href={project.LiveProject}>Live Project</Link>
               </LinkDiv>
               <LinkDiv>
                 {' '}
                 <FontAwesomeIcon icon={faArrowRight} />
-                <Link href="#">Source Code</Link>
+                <Link href={project.SourceCode}>Source Code</Link>
               </LinkDiv>
               {/* <MyButton type="button">Source Code</MyButton>
             <MyButton type="button">Live Project</MyButton> */}
