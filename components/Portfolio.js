@@ -10,7 +10,7 @@ const projects = [
     Description:
       'I built Trip Report to solve an issue I come across constantly in my work as a corporate flight attendant: sharing passenger feedback and preferences with my teammates. Users can update the owner of an aircrafts preferences and standard stock requests. They can also create new trips on a specific aircraft, add catering requests to the trip, and then review and provide feedback once the trip is complete. Trip Report is a work in progress. I am currently adding individual passenger profiles, crew profiles, and important aircraft document upload.',
     SourceCode: 'https://github.com/nongrubl89/Trip-Report',
-    LiveProject: 'https://trip-report-d9g2.vercel.app/',
+    LiveProject: 'https://trip-report-alpha.vercel.app/',
   },
   {
     name: 'Tennis Memory Game',
@@ -93,8 +93,8 @@ export default function Portfolio() {
   return (
     <Frame>
       <PortfolioContainer>
-        {projects.map((project) => (
-          <>
+        {projects.map((project, i) => (
+          <div key={i}>
             <hr
               style={{
                 border: '0',
@@ -132,7 +132,7 @@ export default function Portfolio() {
             <MyButton type="button">Live Project</MyButton> */}
             </ButtonDiv>
             {/* <Line /> */}
-          </>
+          </div>
         ))}
       </PortfolioContainer>
     </Frame>
