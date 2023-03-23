@@ -10,13 +10,13 @@ const ticker = keyframes`
   `;
 
 const TickerContainer = styled.div`
-  width: 100%;
+  /* width: 100%; */
   overflow: hidden;
   white-space: nowrap;
   padding-left: 100%;
   box-sizing: content-box;
   position: relative;
-  height: 50vh;
+  height: max-content;
 `;
 const Ticker = styled.div`
   display: inline-block;
@@ -32,7 +32,7 @@ const Ticker = styled.div`
 const TickerItem = styled.h1`
   display: inline-block;
   padding: 0 1rem;
-  font-size: 3em;
+  font-size: 10em;
   font-family: 'Archivo', sans-serif;
   font-weight: 300;
   animation-delay: ${(props) => props.animationDelay};

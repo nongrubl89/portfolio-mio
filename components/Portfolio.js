@@ -94,7 +94,7 @@ export default function Portfolio() {
     <Frame>
       <PortfolioContainer>
         {projects.map((project, i) => (
-          <div key={i}>
+          <>
             <hr
               style={{
                 border: '0',
@@ -132,7 +132,7 @@ export default function Portfolio() {
             <MyButton type="button">Live Project</MyButton> */}
             </ButtonDiv>
             {/* <Line /> */}
-          </div>
+          </>
         ))}
       </PortfolioContainer>
     </Frame>
