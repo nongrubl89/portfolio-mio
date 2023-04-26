@@ -8,7 +8,7 @@ const projects = [
     name: 'Trip Report',
     Tecnologies: 'Next.js, React Styled Components, Apollo GraphQL, Strapi CMS',
     Description:
-      'I built Trip Report to solve an issue I come across constantly in my work as a corporate flight attendant: sharing passenger feedback and preferences with my teammates. Users can update the owner of an aircrafts preferences and standard stock requests. They can also create new trips on a specific aircraft, add catering requests to the trip, and then review and provide feedback once the trip is complete. Trip Report is a work in progress. I am currently adding individual passenger profiles, crew profiles, and important aircraft document upload.',
+      "I built Trip Report to solve an issue I come across constantly in my work as a corporate flight attendant: sharing passenger feedback and preferences with my teammates. Users can update the owner of an aircraft's preferences and standard stock requests. They can also create new trips on a specific aircraft, add catering requests to the trip, and then review and provide feedback once the trip is complete. Trip Report is a work in progress. I am currently adding individual passenger profiles, crew profiles, and important aircraft document upload.",
     SourceCode: 'https://github.com/nongrubl89/Trip-Report',
     LiveProject: 'https://trip-report-alpha.vercel.app/',
   },
@@ -22,12 +22,12 @@ const projects = [
     LiveProject: 'https://ecstatic-lichterman-006afa.netlify.app/',
   },
   {
-    name: 'Book Tracker',
-    Tecnologies: 'Vanilla Javascript, HTML, CSS',
+    name: 'Airplane Food',
+    Tecnologies: 'Node.js, EJS, Express.js, MongoDB, Multer Image Processing',
     Description:
-      'This is an older project built with the New York Times books API. Users can track and rate books that theyve read and discover other books by their favorite authors thanks to the New York Times books API!',
-    SourceCode: 'github.com',
-    LiveProject: 'github.com',
+      "Airplane Food is a small blog built with EJS templating. It's a CRUD app showcasing some of the recipes I like to use while cooking at 40,000 feet. Bon Appetit and Bon Voyage!",
+    SourceCode: 'https://github.com/nongrubl89/Mangiamo',
+    LiveProject: 'https://airplane-food.herokuapp.com/',
   },
 ];
 

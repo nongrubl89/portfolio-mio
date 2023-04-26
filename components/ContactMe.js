@@ -15,10 +15,13 @@ const ContactDiv = styled(motion.div)`
   h4 {
     font-family: 'Archivo', sans-serif;
     font-weight: 200;
+    font-size: 1em;
+    padding: 1em;
   }
   h6 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    font-size: 1em;
   }
 `;
 
