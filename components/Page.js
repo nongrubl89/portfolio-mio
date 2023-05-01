@@ -42,22 +42,22 @@ const GlobalStyles = createGlobalStyle`
 // eslint-disable-next-line react/prop-types
 export default function Page({ children }) {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [color, setColor] = useState('#eeea77');
+  const [color, setColor] = useState('#F3C9DD');
   const handleScroll = () => {
     const position = window.scrollY;
     console.log(position);
     setScrollPosition(position);
     if (scrollPosition >= 100 && scrollPosition <= 800) {
-      setColor('#1a62a3');
+      setColor('#FFA8D2');
     }
     if (scrollPosition <= 100) {
-      setColor('#eeea77');
+      setColor('#F3C9DD');
     }
     if (scrollPosition >= 800 && scrollPosition <= 2200) {
-      setColor('#9678B6');
+      setColor('#FF73B7');
     }
     if (scrollPosition >= 2200) {
-      setColor('#eeea77');
+      setColor('#F853A3');
     }
   };
 
